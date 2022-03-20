@@ -1,0 +1,433 @@
+{
+    "musicDB": [
+        {
+            "id": 0,
+            "name": "Aluta Continua",
+            "author_name": "Bablwa M",
+            "img": "/assets/img/ac.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type": "Amapiano",
+            "musicName": "ac.mp3",
+            "attribution": {
+                "song": "Clarx - Shakedown [NCS Release]",
+                "musicBy": "NoCopyrightSounds",
+                "download": "http://ncs.io/Shakedown",
+                "stream": "http://youtu.be/qJT0mc3q6Lg"
+            }
+        },
+        {
+            "id": 1,
+            "name": "Ma'Dice(Ft Madglera Doe Boy)",
+            "author_name": "Wordz Tha Prince",
+            "img": "assets/img/popm.jpg",
+            "lang": null,
+            "timesPlayed": 0,
+            "type":"instrumental",
+            "musicName": "dice.mp3",
+            "attribution": {
+                "song": "Games Worldbeat",
+                "musicBy": "mixkit",
+                "download": null,
+                "stream": null
+            }
+        },
+        {
+            "id": 2,
+            "name": "Vuk'esofeni",
+            "author_name": "Kid X",
+            "img": "assets/img/foz.jpg",
+            "lang": "ENGLISH",
+            "type": "electronic",
+            "timesPlayed": 0,
+            "musicName": "vuk.mp3",
+            "attribution": {
+                "song": "ROY KNOX - Over My Head (Feat. Mike Robert) [NCS Release]",
+                "musicBy": "NoCopyrightSounds",
+                "download": "http://ncs.io/OverMyHead",
+                "stream": null
+            }
+        },
+    
+        {
+            "id": 3,
+            "name": "Adiwele",
+            "author_name": "Young Stunna",
+            "img": "assets/img/young.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type": "electronic",
+            "musicName": "Midranger - Apocalypse [NCS Release].mp3",
+            "attribution": {
+                "song": "Midranger - Apocalypse [NCS Release]",
+                "musicBy": "NoCopyrightSounds",
+                "download": "http://ncs.io/Apocalypse",
+                "stream": "http://youtu.be/Whw1sWDpAvE"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Kabza Unrealesed",
+            "author_name": "Kabza",
+            "img": "assets/img/notAvailable.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type": "electronic",
+            "musicName": ".mp3",
+            "attribution": {
+                "song": "N3WPORT - Alive (feat. Neoni) [NCS Release]",
+                "musicBy": "NoCopyrightSounds",
+                "download": "http://ncs.io/NAlive",
+                "stream": "http://youtu.be/vJAcXd_UtWQ"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Impact Moderato",
+            "author_name": "Kevin MacLeod",
+            "img": "assets/img/notAvailable.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type":"instrumental",
+            "musicName": "impact.mp3",
+            "attribution": {
+                "song": "Impact Moderato",
+                "musicBy": "Kevin MacLeod",
+                "download": null,
+                "stream": null
+            }
+        },
+        {
+            "id": 7,
+            "name": "Impact Moderato 2",
+            "author_name": "Kevin MacLeod",
+            "img": "assets/img/notAvailable.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type":"instrumental",
+            "musicName": "impact2.mp3",
+            "attribution": {
+                "song": "Impact Moderato",
+                "musicBy": "Kevin MacLeod",
+                "download": null,
+                "stream": null
+            }
+        },
+        {
+            "id": 8,
+            "name": "Turf Luck",
+            "author_name": "A-Reece x Jay Jody",
+            "img": "assets/img/turfLuck.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type": "electronic",
+            "musicName": "tl.mp3",
+            "attribution": {
+                "song": "Heuse & Tom Wilson - Ignite [NCS Release]",
+                "musicBy": "NoCopyrightSounds",
+                "download": "http://ncs.io/Ignite",
+                "stream": "http://youtu.be/zbqgv0mMfwk"
+            }
+        },
+        {
+            "id": 9,
+            "name": "Turf Luck",
+            "author_name": "A-Reece x Jay Jody",
+            "img": "assets/img/turfLuck.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type": "electronic",
+            "musicName": "tl.mp3",
+            "attribution": {
+                "song": "Heuse & Tom Wilson - Ignite [NCS Release]",
+                "musicBy": "NoCopyrightSounds",
+                "download": "http://ncs.io/Ignite",
+                "stream": "http://youtu.be/zbqgv0mMfwk"
+            }
+        },
+        {
+            "id": 10,
+            "name": "Turf Luck",
+            "author_name": "A-Reece x Jay Jody",
+            "img": "assets/img/turfLuck.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type": "electronic",
+            "musicName": "tl.mp3",
+            "attribution": {
+                "song": "Heuse & Tom Wilson - Ignite [NCS Release]",
+                "musicBy": "NoCopyrightSounds",
+                "download": "http://ncs.io/Ignite",
+                "stream": "http://youtu.be/zbqgv0mMfwk"
+            }
+        }
+    ],
+    "article": [
+        {
+            "id": "0",
+            "title": "Fans react to young stunna's hot album",
+            "author_name": "Blvck Steph",
+            "img": "assets/img/m&s.jpg",
+            "lang": "ENGLISH",
+            "timesRead": 0,
+            "comment_count": 0,
+            "readTime": "30 minutes",
+            "link": "young-stunnas-story"
+        },
+        {
+            "id": "1",
+            "title": "Fans react to young stunna's hot album",
+            "author_name": "Blvck Steph",
+            "img": "assets/img/young.jpg",
+            "lang": "ENGLISH",
+            "timesRead": 0,
+            "comment_count": 2,
+            "comments": [
+                {
+                    "commenter": "Thabo",
+                    "comment": "Dope read",
+                    "time": "21 January 2022 15:45"
+                },
+                {
+                    "commenter": "Thato",
+                    "comment": "Dope writting",
+                    "time": "21 January 2022 15:45"
+                }
+            ],
+            "readTime": "30 minutes",
+            "link": "young-stunnas-story"
+        },
+        {
+            "id": "2",
+            "title": "Fans react to young stunna's hot album",
+            "author_name": "Blvck Steph",
+            "img": "assets/img/young.jpg",
+            "lang": "ENGLISH",
+            "timesRead": 0,
+            "comment_count": 1,
+            "readTime": "30 minutes",
+            "link": "young-stunnas-story"
+        },
+        {
+            "id": "3",
+            "title": "Fans react to young stunna's hot album",
+            "author_name": "Blvck Steph",
+            "img": "assets/img/young.jpg",
+            "lang": "ENGLISH",
+            "timesRead": 0,
+            "comment_count": 1,
+            "readTime": "30 minutes",
+            "link": "young-stunnas-story"
+        }
+    ],
+    "NewMusic": [
+        {
+            "id": 1,
+            "name": "Kabza Unrealesed",
+            "author_name": "Kabza",
+            "img": "assets/img/notAvailable.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type": "electronic",
+            "musicName": ".mp3",
+            "attribution": {
+                "song": "N3WPORT - Alive (feat. Neoni) [NCS Release]",
+                "musicBy": "NoCopyrightSounds",
+                "download": "http://ncs.io/NAlive",
+                "stream": "http://youtu.be/vJAcXd_UtWQ"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Impact Moderato",
+            "author_name": "Kevin MacLeod",
+            "img": "assets/img/notAvailable.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type":"instrumental",
+            "musicName": "impact.mp3",
+            "attribution": {
+                "song": "Impact Moderato",
+                "musicBy": "Kevin MacLeod",
+                "download": null,
+                "stream": null
+            }
+        },
+        {
+            "id": 3,
+            "name": "Impact Moderato 2",
+            "author_name": "Kevin MacLeod",
+            "img": "assets/img/notAvailable.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type":"instrumental",
+            "musicName": "impact2.mp3",
+            "attribution": {
+                "song": "Impact Moderato",
+                "musicBy": "Kevin MacLeod",
+                "download": null,
+                "stream": null
+            }
+        },
+        {
+            "id": 4,
+            "name": "Turf Luck",
+            "author_name": "A-Reece x Jay Jody",
+            "img": "assets/img/turfLuck.jpg",
+            "lang": "ENGLISH",
+            "timesPlayed": 0,
+            "type": "electronic",
+            "musicName": "tl.mp3",
+            "attribution": {
+                "song": "Heuse & Tom Wilson - Ignite [NCS Release]",
+                "musicBy": "NoCopyrightSounds",
+                "download": "http://ncs.io/Ignite",
+                "stream": "http://youtu.be/zbqgv0mMfwk"
+            }
+        }
+    ],
+    "Albums": 
+        {
+            "album": "Victory Lap",
+            "image": "/assets/img/vl.jpg",
+            "artist": "Nipsey Hussle",
+            "genre": "Hip-Hop",
+            "tracks": [
+                {
+                    "track_number": 1,
+                    "track_title": "Victory Lap",
+                    "feature": "Stacy Barthe"
+                },
+                {
+                    "track_number": 2,
+                    "track_title": "Rap Niggas",
+                    "feature": ""
+                },
+                {
+                    "track_number": 3,
+                    "track_title": "Last Time I Checc'd",
+                    "feature": "YG"
+                },
+                {
+                    "track_number": 4,
+                    "track_title": "Young Nigga",
+                    "feature": "Puff Daddy"
+                },
+                {
+                    "track_number": 5,
+                    "track_title": "Dedication",
+                    "feature": "Kendrick Lamar"
+                },
+                {
+                    "track_number": 6,
+                    "track_title": "Blue Laces 2",
+                    "feature": ""
+                },
+                {
+                    "track_number": 7,
+                    "track_title": "Hussle & Motivate",
+                    "feature": ""
+                },
+                {
+                    "track_number": 8,
+                    "track_title": "Status Symbol 3",
+                    "feature": "Buddy"
+                },
+                {
+                    "track_number": 9,
+                    "track_title": "Succa Proof",
+                    "feature": "Stacy Barthe"
+                },
+                {
+                    "track_number": 10,
+                    "track_title": "Keys 2 The City 2",
+                    "feature": "TeeFlii"
+                },
+                {
+                    "track_number": 11,
+                    "track_title": "Grinding All My Life",
+                    "feature": ""
+                },
+                {
+                    "track_number": 12,
+                    "track_title": "Million While You Young",
+                    "feature": "The Dream"
+                },
+                {
+                    "track_number": 13,
+                    "track_title": "Loaded Bases",
+                    "feature": "CeeLo Green"
+                },
+                {
+                    "track_number": 14,
+                    "track_title": "Real Big",
+                    "feature": "Marsha Ambrosius"
+                },
+                {
+                    "track_number": 1,
+                    "track_title": "Double Up",
+                    "feature": "Belly & Dom Kennedy"
+                },
+                {
+                    "track_number": 16,
+                    "track_title": "Right Hand 2 God",
+                    "feature": ""
+                }
+            ]
+        }
+    ,
+    "Artists": [
+        {
+            "artist": "Nipsey Hussle",
+            "img": "/assets/img/nip.jpeg",
+            "artistId": "x60"
+        },
+        {
+            "artist": "Kwesta",
+            "img": "/assets/img/kwesta.jpeg",
+            "artistId": "xDakar"
+        },
+        {
+            "artist": "Lil' Wayne",
+            "img": "/assets/img/wayne.jpeg",
+            "artistId": "xtune"
+        },
+        {
+            "artist": "Dj Maphorisa",
+            "img": "/assets/img/phori.jpeg",
+            "artistId": "xphori"
+        }
+    ],
+    "Genres": [
+        {
+            "id": 0,
+            "genre": "Hip-Hop",
+            "img": "/assets/img/genre/newrap.jpeg"
+        },
+        {
+            "id": 1,
+            "genre": "Old School Hip-Hop",
+            "img": "/assets/img/genre/oldschool.jpeg"
+        },
+        {
+            "id": 2,
+            "genre": "Amapiano",
+            "img": "/assets/img/genre/piano.jpeg"
+        },
+        {
+            "id": 3,
+            "genre": "House Music",
+            "img": "/assets/img/genre/house.jpg"
+        },
+        {
+            "id": 4,
+            "genre": "R&B",
+            "img": "/assets/img/genre/rnb.png"
+        },
+        {
+            "id": 5,
+            "genre": "Soul Music",
+            "img": "/assets/img/genre/soul.jpeg"
+        }
+    ]
+}

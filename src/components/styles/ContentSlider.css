@@ -1,0 +1,20 @@
+.contentSlider_content{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.contentSlider_content::-webkit-scrollbar{
+    display: none;
+}
+.btn-browse {
+    font-size: 1.5rem;
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.4rem;
+}
+.btn-browse:hover {
+    background-color: white;
+    color: red;
+}

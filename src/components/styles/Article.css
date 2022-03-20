@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+*{
+  font-family: 'Open Sans';
+  line-height: 170%;
+}
+body, p, h1, h2{
+  margin: 0;
+  padding: 0;
+}
+h2{
+  margin-top: 20px;
+}
+mark {
+  background-color: white;
+  padding: 0px 3px;
+} 
+
+.wrapper{
+  padding: 100px;
+  margin: 0 0 50px 0;
+  text-align: left;
+  height: 40vh;
+  background: url('https://source.unsplash.com/KqVHRmHVwwM/1600x900') no-repeat center center fixed;
+  background-size: cover;
+  background: no-repeat center center fixed;
+  transition: all 0.4s ease;
+}
+.articleText{
+  margin: 0 10% 30px 20%; 
+  width: 60%;
+  max-width: 800px;
+  padding-left: 30px;
+  border-left: 1px solid #cccccc;
+  transition: all 0.4s ease;
+}
+.introduction{
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 1000px) {
+  .articleText {
+    margin: 0 10% 30px 10%; 
+    width: 80%;
+    max-width: 800px;
+    padding-left: 0px;
+    border: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .articleText {
+    margin: 0 5% 30px 5%; 
+    width: 90%;
+  }
+  .wrapper{
+    padding: 5%;
+  }
+}

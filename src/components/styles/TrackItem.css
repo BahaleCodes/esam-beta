@@ -1,0 +1,15 @@
+.TrackItem {
+    height: 4rem;
+    width: 100%;
+    /* background-color: #777; */
+    padding: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    /* align-items: center; */
+    border: 1px solid red;
+}
+.Track-text {
+    color: red;
+}

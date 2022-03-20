@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link-item{
+    cursor: pointer;
+    color: white;
+  }
+  #main {
+    background: black;
+    background: linear-gradient(110deg, black 50%, red 50%);
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #main .nav-item {
+    height: 10vh;
+    display: flex;
+    font-size: 1.3rem;
+    color: #f8eeee;
+  }
+  #main .nav-item .navbar-brand {
+  
+    color: #f8eeee;
+    font-size: 3rem;
+  }
+  #main .main-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
+    color: #fff;
+  }
+  #main .main-row .main-row-img {
+    flex-basis: 5%;
+    flex-grow: 1;
+  }
+  #main .main-row .main-row-img .head-phone-img {
+    width: 60%;
+  }
+  #main .main-row .logInFrm {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+  .logInFrm{
+    background-color: #282c34;
+    border-radius: 5px;
+  }
+  #main .main-row .logInFrm h1 {
+  
+    font-size: 3rem;
+  }
+  #main .main-row .logInFrm p {
+    color: #f8eeee;
+    font-size: 1.2rem;
+  }
+  #main .main-row .logInFrm .btn {
+    letter-spacing: 2px;
+    border: none;
+    background-color: #282c34;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 5px;
+  }
+  #main .main-row .logInFrm .btn:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  
+  /*# sourceMappingURL=Login.scss.map */
+  .loginFromCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 20rem; */
+    margin-right: 5rem;
+    border: none;
+  border-top: 2px solid red;
+    color: white;
+    
+  
+  }
+  p {
+    font-weight: 600;
+    font-size: 15px
+  }
+  
+  .fab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: #282c34;
+    height: 40px;
+    width: 90px
+  }
+  
+  .fab:hover {
+    cursor: pointer
+  }
+  
+  .fa-twitter {
+    color: #56ABEC
+  }
+  
+  .fa-facebook {
+    color: #1775F1
+  }
+  
+  .fa-google {
+    color: #CB5048
+  }
+  
+  .division {
+    float: none;
+    position: relative;
+    margin: 30px auto 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box
+  }
+  
+  .division .line {
+    border-top: 1.5px solid #57557A;
+    ;
+    position: absolute;
+    top: 13px;
+    width: 85%
+  }
+  
+  .line.l {
+    left: 52px
+  }
+  
+  .line.r {
+    right: 45px
+  }
+  
+  .division span {
+    font-weight: 600;
+    font-size: 14px
+  }
+  
+  .myform {
+    padding: 0 25px 0 33px
+  }
+  
+  .form-control {
+    border: 1px solid #282c34;
+    border-radius: 3px;
+    background: #282c34;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+    
+  }
+  
+  .form-control:focus {
+    border: 1px solid #282c34;
+    border-radius: 3px;
+    box-shadow: none;
+    background: #282c34;
+    color: #fff;
+    letter-spacing: 1px
+  }
+  
+  .bn {
+    text-decoration: underline
+  }
+  
+  .bn:hover {
+    cursor: pointer
+  }
+  
+  .form-check-input {
+    margin-top: 8px !important
+  }
+  
+  .btn-primary , .btn-primary:hover {
+    background: red;
+    border: none;
+    border-radius: 10px
+  }
+  
+  .btn-primary:focus {
+    box-shadow: none;
+    border: none
+  }
+  
+  
+  .Cont, .Cont:hover{
+    color: white;
+    font-size: medium;
+    margin-top: 15px;
+  }
+  
+  input.error {
+    border-color: red;
+  }
+  
+  .input-feedback {
+    color: rgb(235, 54, 54);
+    margin-top: -15px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
