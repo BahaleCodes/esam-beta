@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/FooterSelectMusic.scss';
+import '../styles/FooterSelectMusic.css';
 
 function FooterSelectMusic() {
     return (

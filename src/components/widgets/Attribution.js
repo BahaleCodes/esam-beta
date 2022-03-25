@@ -1,9 +1,9 @@
 import React from 'react';
 import '../styles/Attribution.scss';
-// import {useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 const Attribution = () => {
-    // const {playing} = useSelector(state => state.musicReducer);
+    const {playing} = useSelector(state => state.musicReducer);
     return (
         <div className={"Attribution"}>
             <h3>Attribution</h3>
@@ -26,23 +26,27 @@ const Attribution = () => {
                 <div className={"Attribution-div"}>
                     <div className="Attribution-text">
                         <div>
-                            {/* <p>Song: {playing.attribution.song}</p>
-                            <p>Music by: {playing.attribution.musicBy}</p> */}
+                            <p>
+                                Song: {playing.attribution.song}
+                            </p>
+                            <p>
+                                Music by: {playing.attribution.musicBy}
+                            </p>
                             <p>
                                 {
-                                    // playing.attribution.download !== null &&
+                                    playing.attribution.download !== null &&
                                     <span>
                                     Download:
-                                    {/* <a href={playing.attribution.download}>{playing.attribution.download}</a> */}
+                                    <a href={playing.attribution.download}>{playing.attribution.download}</a>
                                 </span>
                                 }
                             </p>
                             <p>
                                 {
-                                    // playing.attribution.stream !== null &&
+                                    playing.attribution.stream !== null &&
                                     <span>
                                     Download:
-                                    {/* <a href={playing.attribution.stream}>{playing.attribution.stream}</a> */}
+                                    <a href={playing.attribution.stream}>{playing.attribution.stream}</a>
                                 </span>
                                 }
                             </p>

@@ -32,7 +32,7 @@ const SignInForm = () => (
                 values,
                 touched,
                 errors,
-                // isSubmitting,
+                isSubmitting,
                 handleChange,
                 handleBlur,
                 handleSubmit

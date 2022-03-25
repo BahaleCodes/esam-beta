@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import SearchSharpIcon from "@material-ui/icons/SearchSharp";
 import CancelIcon from "@material-ui/icons/Cancel";
 
-import '../styles/SearchBar.scss';
-// import { setSearch } from "../../actions/actions";
+import '../styles/SearchBar.css';
+import { setSearch } from "../../actions/actions";
 
 const SearchBar = () => {
     const [isSearchBarOpen, setSearchBarOpen] = useState(false);
@@ -23,11 +23,11 @@ const SearchBar = () => {
         }
     });
 
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const searchLink = useRef();
     const handleSearch = (e) => {
         e.preventDefault();
-        // dispatch(setSearch(searchQuery.toLowerCase()));
+        dispatch(setSearch(searchQuery.toLowerCase()));
         if (searchQuery !== "")
             searchLink.current.click();
     };
@@ -57,7 +57,7 @@ const SearchBar = () => {
                 <div className={"SearchBar-customPlaceholderOpen"}
                     onClick={handleSearchBarOpen}>
                     <SearchSharpIcon style={{ color: "grey" }} className="search-icon" fontSize="small" />
-                    <p className={"hide"}>&nbsp;Search</p>
+                    <p className={"hide mt-3"}>&nbsp;Search</p>
                 </div>
             }
             {

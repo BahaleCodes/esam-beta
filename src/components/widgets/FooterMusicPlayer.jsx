@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import axios from "axios";
-// import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
-import '../styles/FooterPlayer.scss';
+import '../styles/FooterPlayer.css';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import RepeatOneIcon from '@material-ui/icons/RepeatOne';
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
@@ -18,50 +17,40 @@ import Button from "@material-ui/core/Button";
 import ControlsToggleButton from "./ControlsToggleButton";
 import Name from "./Name";
 import { ThemeContext } from "../styles/Theme";
-// import { setBannerOpen, setCurrentPlaying } from "../../actions/actions";
+import { setBannerOpen, setCurrentPlaying } from "../../actions/actions";
 
 function FooterMusicPlayer({ music }) {
-    // const [{ id, title, artist, image, song_file }, setCurrTrack] = useState(music);
-    let id = music;
-    const [ song, setSong ] = useState({
-        title: "",
-        artist: "",
-        image: "",
-        song_file: ""
-    });
+    const [{ id, title, artist, image, song_file }, setCurrTrack] = useState(music);
     const [isRepeatClicked, setRepeatClick] = useState(false);
-    // const [isPrevClicked, setPrevClicked] = useState(false);
-    // const [isNextClicked, setNextClicked] = useState(false);
+    const [isPrevClicked, setPrevClicked] = useState(false);
+    const [isNextClicked, setNextClicked] = useState(false);
     const [isPlaying, setPlayPauseClicked] = useState(false);
     const [isVolumeClicked, setVolumeClicked] = useState(false);
     const [volume, setVolume] = useState(50);
     const [seekTime, setSeekTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const [currTime, setCurrTime] = useState(0);
-
     const [bannerToggle, setBannerToggle] = useState(false);
-    
     const audioElement = useRef();
-    // const dispatch = useDispatch();
-    // const { playlists } = useSelector(state => state.musicReducer);
+    const dispatch = useDispatch();
+    const { playlists } = useSelector(state => state.musicReducer);
     const useStyle = useContext(ThemeContext);
     const pointer = { cursor: "pointer", color: "white" };
-    const base_url = "http://127.0.0.1:8000";
 
     const handleToggle = (type, val) => {
         switch (type) {
             case "repeat":
                 setRepeatClick(val);
                 break;
-            // case "prev":
-            //     setPrevClicked(val);
-            //     break;
+            case "prev":
+                setPrevClicked(val);
+                break;
             case "play-pause":
                 setPlayPauseClicked(val);
                 break;
-            // case "next":
-            //     setNextClicked(val);
-            //     break;
+            case "next":
+                setNextClicked(val);
+                break;
             case "volume":
                 setVolumeClicked(val);
                 break;
@@ -79,17 +68,12 @@ function FooterMusicPlayer({ music }) {
     const handleBannerToggle = () => {
         setBannerToggle(!bannerToggle);
     };
-    // useEffect(() => {
-    //     dispatch(setBannerOpen(bannerToggle));
-    // }, [dispatch, bannerToggle]);
+    useEffect(() => {
+        dispatch(setBannerOpen(bannerToggle));
+    }, [dispatch, bannerToggle]);
     useEffect(() => {
         isPlaying
-            ? audioElement.current.play()
-                .then(() => { })
-                .catch((e) => { 
-                    audioElement.current.pause();
-                    audioElement.current.currentTime = 0;
-            })
+            ? audioElement.current.play().then(() => { }).catch((e) => { audioElement.current.pause(); audioElement.current.currentTime = 0; })
             : audioElement.current.pause();
         audioElement.current.loop = isRepeatClicked;
         audioElement.current.volume = volume / 100;
@@ -104,35 +88,31 @@ function FooterMusicPlayer({ music }) {
         })
     });
     useEffect(() => {
-        const getSong = async () => {
-			return await axios.get(`http://127.0.0.1:8000/api/content/songs/?id=${id}`)
-			.then(res => setSong(JSON.parse(JSON.stringify(res.data))))
-		}
-		getSong()
-    }, [id]);
+        setCurrTrack(music);
+    }, [music]);
     useEffect(() => {
         setSeekTime((currTime) / (duration / 100))
     }, [currTime, duration]);
-    // useEffect(() => {
-    //     audioElement.current.onended = () => {
-    //         setNextClicked(true);
-    //     };
-    // })
-    // useEffect(() => {
-    //     if (isNextClicked) {
-    //         let currTrackId = (id + 1) % playlists.length;
-    //         dispatch(setCurrentPlaying(playlists[currTrackId]));
-    //         setNextClicked(false);
-    //     }
-    //     if (isPrevClicked) {
-    //         let currTrackId = (id - 1) % playlists.length;
-    //         if ((id - 1) < 0) {
-    //             currTrackId = playlists.length - 1;
-    //         }
-    //         dispatch(setCurrentPlaying(playlists[currTrackId]));
-    //         setPrevClicked(false);
-    //     }
-    // }, [dispatch, id, isNextClicked, isPrevClicked, playlists]);
+    useEffect(() => {
+        audioElement.current.onended = () => {
+            setNextClicked(true);
+        };
+    })
+    useEffect(() => {
+        if (isNextClicked) {
+            let currTrackId = (id + 1) % playlists.length;
+            dispatch(setCurrentPlaying(playlists[currTrackId]));
+            setNextClicked(false);
+        }
+        if (isPrevClicked) {
+            let currTrackId = (id - 1) % playlists.length;
+            if ((id - 1) < 0) {
+                currTrackId = playlists.length - 1;
+            }
+            dispatch(setCurrentPlaying(playlists[currTrackId]));
+            setPrevClicked(false);
+        }
+    }, [dispatch, id, isNextClicked, isPrevClicked, playlists]);
     function formatTime(secs) {
         const t = new Date(1970, 0, 1);
         t.setSeconds(secs);
@@ -153,14 +133,12 @@ function FooterMusicPlayer({ music }) {
                 }
             </div>
             <Button
-                startIcon={
-                    <Avatar variant="square" src={`${base_url}${song.image}`} alt={song.title} />
-                }
+                startIcon={<Avatar variant="square" src={image} alt={title} />}
                 onClick={handleBannerToggle}
                 className="curr-music-container">
                 <div className="curr-music-details">
-                    <Name name={song.title} className={"song-name"} />
-                    <Name name={song.artist} className={"author-name"} />
+                    <Name name={title} className={"song-name"} />
+                    <Name name={artist} className={"author-name"} />
                 </div>
             </Button>
             <div className="playback-controls">
@@ -173,7 +151,7 @@ function FooterMusicPlayer({ music }) {
                     defaultIcon={<SkipPreviousIcon fontSize={"large"} />}
                     changeIcon={<SkipPreviousIcon fontSize={"large"} />}
                     onClicked={handleToggle} />
-                <audio ref={audioElement} src={`${base_url}${song.song_file}`} preload={"metadata"} />
+                <audio ref={audioElement} src={song_file} preload={"metadata"} />
                 <ControlsToggleButton style={pointer} type={"play-pause"}
                     defaultIcon={<PlayArrowIcon fontSize={"large"} />}
                     changeIcon={<PauseIcon fontSize={"large"} />}

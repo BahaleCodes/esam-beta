@@ -100,15 +100,13 @@ const Auth = () => {
             <ErrorModal error={error} onClear={clearError} />
                 {isLoading && <LoadingSpinner asOverlay />}
                 {
-               isLoginMode ?  <h2 className="mt-6 text-center text-3xl font-extrabold text-white-900">Sign in to your account</h2> : <h2 className="mt-6 text-center text-3xl font-extrabold text-white-900">Create a new account</h2>
+               isLoginMode ?  <h2 className="mt-6 text-center text-3xl font-extrabold text-white">Sign in to your account</h2> : <h2 className="mt-6 text-center text-3xl font-extrabold text-white-900">Create a new account</h2>
             }
             <div>
             <p className="mt-2 text-center text-sm text-gray-600" onClick={switchModeHandler}>
               Or{' '}
               {
-                isLoginMode 
-                ?  <a href="/" className="font-medium text-white-600 hover:text-red-400 mb-4">Creat an account with us.</a> 
-                : <a href="/" className="font-medium text-red-600 hover:text-red-500">Already have an accoun? Sign In.</a>
+                isLoginMode ?  <a href="#" className="font-medium text-white-600 hover:text-red-400 mb-4 ">Creat an account with us.</a> : <a href="#" className="font-medium text-red-600 hover:text-red-500">Already have an accoun? Sign In.</a>
               }
              
             </p>

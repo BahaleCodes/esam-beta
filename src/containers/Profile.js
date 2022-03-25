@@ -1,23 +1,21 @@
-import React, { useEffect, 
-    // useState
-} from 'react';
+import React, { useEffect, useState } from 'react';
 import { PlaylistPlay } from "@material-ui/icons";
 import { Avatar } from "@material-ui/core";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Grade from 'grade-js';
 
-import '../components/styles/Profile.scss';
-// import MusicCard from "../components/widgets/MusicCard";
+import '../components/styles/Profile.css';
+import MusicCard from "../components/widgets/MusicCard";
 import Container from "../components/widgets/Container";
 import SideBarOptions from "../components/widgets/SideBarOptions";
 
 function Profile() {
-    // const { songs } = useSelector(state => state.musicReducer);
-    // const [mostPlayed, setMostPlayed] = useState([]);
-    // useEffect(() => {
-    //     setMostPlayed(playlists.sort(sortByProperty("timesPlayed")));
-    //     setMostPlayed(songs);
-    // }, [songs]);
+    const { songs } = useSelector(state => state.musicReducer);
+    const [mostPlayed, setMostPlayed] = useState([]);
+    useEffect(() => {
+        // setMostPlayed(playlists.sort(sortByProperty("timesPlayed")));
+        setMostPlayed(songs);
+    }, [songs]);
     useEffect(() => {
         Grade(document.querySelectorAll('.gradient-wrap'))
     });
@@ -42,13 +40,13 @@ function Profile() {
                 <div className="bottom-profile">
                     <div>
                         <h3>Most Played</h3>
-                        {/* <div className="most-played">
+                        <div className="most-played">
                             {
                                 mostPlayed?.map((item, index) => (
                                     index <= 5 && <MusicCard key={item.id} music={item} />
                                 ))
                             }
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>

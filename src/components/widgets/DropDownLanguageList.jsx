@@ -1,13 +1,15 @@
 import React, {useContext, useState} from "react";
-import '../styles/DropDown.scss';
+import '../styles/DropDown.css';
 import Button from "@material-ui/core/Button";
 import LangList from "./LangList";
-import {ThemeContext} from "../styles/Theme;
-// import {useDispatch} from "react-redux";
-// import {setMusicLang} from "../../actions/actions";
+import {ThemeContext} from "../styles/Theme";
+import {useDispatch} from "react-redux";
+import {setMusicLang} from "../../actions/actions";
 
 const DropDownLanguageList = () => {
+
     const useStyle = useContext(ThemeContext);
+
     const listOfLanguage = [
         "Any",
         "Hindi",
@@ -26,7 +28,7 @@ const DropDownLanguageList = () => {
             };
         });
     };
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const handleLangSelect = (e) => {
         e.preventDefault();
         let list = [];
@@ -34,7 +36,7 @@ const DropDownLanguageList = () => {
             if (selectedList[i] === true)
                 list.push(i.toLowerCase());
         }
-        // dispatch(setMusicLang(list));
+        dispatch(setMusicLang(list));
     };
 
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../styles/MobTopNav.scss';
+import '../styles/MobTopNav.css';
 import SearchBar from "./SearchBar";
 import Brand from "./Brand";
 

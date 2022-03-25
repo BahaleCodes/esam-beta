@@ -38,10 +38,4 @@ nav .language .expand-grp {
   padding: 0;
 }
 
-@media only screen and (max-width: 970px) {
-  nav {
-    display: none;
-  }
-}
-
 /*# sourceMappingURL=Navigation.scss.map */

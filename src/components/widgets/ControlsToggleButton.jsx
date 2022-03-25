@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Button from "@material-ui/core/Button";
 
-import '../styles/ControlsToggleButton.scss';
+import '../styles/ControlsToggleButton.css';
 
 function ControlsToggleButton(props) {
     let ButtonOne = props.defaultIcon;

@@ -1,23 +1,14 @@
-import React, {
-    // useEffect,
-    useState
-} from 'react';
-import '../styles/CurrentPlayingLarge.scss';
-// import {useSelector} from "react-redux";
+import React, {useEffect, useState} from 'react';
+import '../styles/CurrentPlayingLarge.css';
+import {useSelector} from "react-redux";
 
 function CurrentPlayingLarge() {
-    // const {playing} = useSelector(state => state.musicReducer);
-    const [ 
-        {
-            img,
-            name,
-            author_name
-        },
-        // setCurrPlaying
-    ] = useState();
-    // useEffect(()=>{
-    //     setCurrPlaying(playing);
-    // },[playing]);
+
+    const {playing} = useSelector(state => state.musicReducer);
+    const [{img,name,author_name},setCurrPlaying] = useState(playing);
+    useEffect(()=>{
+        setCurrPlaying(playing);
+    },[playing]);
 
     return (
         <div  className={"CurrentPlayingLarge"}>

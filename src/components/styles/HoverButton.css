@@ -1,8 +1,8 @@
-.hb{
+.hb {
   display: inline-block;
   margin: 5px 0;
   width: 100%;
-  button{
-    width: 100%;
-  }
+}
+.hb button {
+  width: 100%;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/MusicCardSpan.scss';
+import '../styles/MusicCardSpan.css';
 import {PlayArrow} from "@material-ui/icons";
 
 function MusicCardSpan({music}) {

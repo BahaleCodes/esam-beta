@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-// import { useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite";
 import { Skeleton } from "@material-ui/lab";
 import Box from "@material-ui/core/Box";
 
 import '../styles/MusicCard.scss';
-// import { increaseTimesPlayed, setCurrentPlaying } from "../../actions/actions";
+import { increaseTimesPlayed, setCurrentPlaying } from "../../actions/actions";
 import Name from "./Name";
 
 import img from "../assets/img/ac.jpg";
@@ -16,10 +16,10 @@ function MusicCard(props) {
     function handleResponse() {
         setHovered(!isHovered);
     }
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
     function handlePlay() {
-        // dispatch(setCurrentPlaying(props.music.song_file))
-        // dispatch(increaseTimesPlayed(props.music.id));
+        dispatch(setCurrentPlaying(props.music.song_file))
+        dispatch(increaseTimesPlayed(props.music.id));
     }
     const [loaded, setLoaded] = useState(false);
     useEffect(() => {

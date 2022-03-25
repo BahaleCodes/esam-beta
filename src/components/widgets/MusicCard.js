@@ -1,33 +1,24 @@
-import React, { useContext, useEffect, useState } from 'react';
-// import { useDispatch } from "react-redux";
+import React, { useEffect, useState } from 'react';
+import { useDispatch } from "react-redux";
 import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite";
 import { Skeleton } from "@material-ui/lab";
 import Box from "@material-ui/core/Box";
 
-import { MusicContext } from '../../context/music-context';
-import '../styles/MusicCard.scss';
-// import { increaseTimesPlayed, setCurrentPlaying } from "../../actions/actions";
+import '../styles/MusicCard.css';
+import { increaseTimesPlayed, setCurrentPlaying } from "../../actions/actions";
 import Name from "./Name";
 
-const base_url = "http://127.0.0.1:8000";
-
 function MusicCard(props) {
-    const music = useContext(MusicContext);
-    const { title, image, artist, id } = props.music;
+    const { title, image, artist } = props.music;
     const [isHovered, setHovered] = useState(false);
     function handleResponse() {
         setHovered(!isHovered);
     }
-    // const dispatch = useDispatch();
-    const handlePlay = async (e) => {
+    const dispatch = useDispatch();
+    function handlePlay() {
         console.log(props.music);
-        e.preventDefault();
-        try {
-            await music.play_song(id);
-        }
-        catch (err) { }
-        // dispatch(setCurrentPlaying(props.music))
-        // dispatch(increaseTimesPlayed(props.music.id));
+        dispatch(setCurrentPlaying(props.music))
+        dispatch(increaseTimesPlayed(props.music.id));
     }
     const [loaded, setLoaded] = useState(false);
     useEffect(() => {
@@ -47,7 +38,7 @@ function MusicCard(props) {
                     :
                     <div>
                         <div onClick={handlePlay} className={"music-card-cover"} onMouseOver={handleResponse}>
-                            <img src={`${base_url}${image}`} alt={title} />
+                            <img src={`http://127.0.0.1:8000/${image}`} alt={title} />
                             <div className="play-circle">
                                 <PlayCircleFilledWhiteIcon />
                             </div>

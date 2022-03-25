@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import '../styles/HoverButton.scss';
+import '../styles/HoverButton.css';
 import {Button} from "@material-ui/core";
 import {ThemeContext} from "../styles/Theme";
 import {Link} from "react-router-dom";

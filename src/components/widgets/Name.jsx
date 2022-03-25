@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Name.scss';
+import '../styles/Name.css';
 
 function Name({className,length,name}) {
     return (

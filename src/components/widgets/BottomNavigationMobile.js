@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import '../styles/BottomNavigation.scss';
+import '../styles/BottomNavigation.css';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import SearchIcon from '@material-ui/icons/Search';

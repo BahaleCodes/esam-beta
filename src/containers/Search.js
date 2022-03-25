@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from "react-redux";
 
-import '../components/styles/Search.scss';
+import '../components/styles/Search.css';
 import Container from "../components/widgets/Container";
 import MusicCard from "../components/widgets/MusicCard";
 
