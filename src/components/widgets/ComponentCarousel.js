@@ -13,7 +13,7 @@ function ComponentCarousel(props) {
       ]
     return (
         <div>
-        <h1 class="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">{props.title}</h1>
+        <h1 className="mt-1 text-lg font-semibold text-white sm:text-slate-900 md:text-2xl dark:sm:text-white">{props.title}</h1>
         <Carousel   breakPoints={breakPoints}>
             {props.children}
         </Carousel>

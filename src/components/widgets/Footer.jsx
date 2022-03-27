@@ -52,7 +52,7 @@ function Footer() {
                         <BsInstagram className="footerIcon" />
                         <BsFacebook className="footerIcon" />
                         {/* <BsWhatsapp className='footerIcon'> </BsWhatsapp> */}
-                        {/* <ReactWhatsapp
+                        <ReactWhatsapp
                             number="+27-62-440-6016"
                             message={"Hello"}
                             type="submit"
@@ -60,10 +60,10 @@ function Footer() {
                                 border: "none",
                                 backgroundColor: "black"
                             }}>
-                            <i> what
+                            <i>
                                 <BsWhatsapp className='footerIcon'> </BsWhatsapp>
                             </i>
-                        </ReactWhatsapp> */}
+                        </ReactWhatsapp>
                     </div>
                 </div>
             </div>

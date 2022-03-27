@@ -1,26 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch } from "react-redux";
+import React, { useContext, useEffect, useState } from 'react';
+// import { useDispatch } from "react-redux";
 import PlayCircleFilledWhiteIcon from "@material-ui/icons/PlayCircleFilledWhite";
 import { Skeleton } from "@material-ui/lab";
 import Box from "@material-ui/core/Box";
-
+import { MusicContext } from '../../context/music-context';
 import '../styles/MusicCard.css';
-import { increaseTimesPlayed, setCurrentPlaying } from "../../actions/actions";
+// import { increaseTimesPlayed, setCurrentPlaying } from "../../actions/actions";
 import Name from "./Name";
 
 function MusicCard(props) {
-    const { title, image, artist } = props.music;
+    const [loaded, setLoaded] = useState(true);
     const [isHovered, setHovered] = useState(false);
+    const { title, image, artist, id } = props.music;
+    const music = useContext(MusicContext);
     function handleResponse() {
         setHovered(!isHovered);
     }
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
+
     function handlePlay() {
-        console.log(props.music);
-        dispatch(setCurrentPlaying(props.music))
-        dispatch(increaseTimesPlayed(props.music.id));
+        console.log(id);
+        music.set_song(id);
+        // dispatch(setCurrentPlaying(props.music))
+        // dispatch(increaseTimesPlayed(props.music.id));
     }
-    const [loaded, setLoaded] = useState(false);
     useEffect(() => {
         setLoaded(true)
     }, []);
@@ -45,7 +48,7 @@ function MusicCard(props) {
                         </div>
                         <React.Fragment>
                             <Name name={title} className={"song-name"} />
-                            <Name name={artist} class="text-sm leading-4 font-medium text-red sm:text-red-500 dark:sm:text-red-400" />
+                            <Name name={artist} className="text-sm leading-4 font-medium text-red sm:text-red-500 dark:sm:text-red-400" />
                         </React.Fragment>
                     </div>
             }

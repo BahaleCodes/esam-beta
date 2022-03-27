@@ -23,9 +23,10 @@ import { MusicContext } from './context/music-context';
 import { useAuth } from './hooks/auth-hooks';
 import { useSong } from './hooks/music-hook';
 import 'antd/dist/antd.css'; 
+
 const App = () => {
 	const { access_token, login, logout, userId } = useAuth();
-	const { songId } = useSong();
+	const { song_id, set_song } = useSong();
 	const [data, setData] = useState({});
 	let routes;
 	useEffect(() => {
@@ -78,8 +79,9 @@ const App = () => {
 		>
 			<MusicContext.Provider
 				value={{
-					isPlaying: !!songId,
-					songId: songId
+					isPlaying: !!song_id,
+					song_id: song_id,
+					set_song: set_song
 				}}
 			>
 				<ThemeContext.Provider value={themes.dark}>
@@ -93,6 +95,3 @@ const App = () => {
 }
 
 export default App;
-
-
-// asdfghaSa@1

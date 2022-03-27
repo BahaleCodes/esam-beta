@@ -98,20 +98,22 @@ const Auth = () => {
     return (
         <React.Fragment>
             <ErrorModal error={error} onClear={clearError} />
-                {isLoading && <LoadingSpinner asOverlay />}
-                {
-               isLoginMode ?  <h2 className="mt-6 text-center text-3xl font-extrabold text-white">Sign in to your account</h2> : <h2 className="mt-6 text-center text-3xl font-extrabold text-white-900">Create a new account</h2>
+            {isLoading && <LoadingSpinner asOverlay />}
+            {
+                isLoginMode ? <h2 className="mt-6 text-center text-3xl font-extrabold text-white">Sign in to your account</h2> : <h2 className="mt-6 text-center text-3xl font-extrabold text-white-900">Create a new account</h2>
             }
             <div>
-            <p className="mt-2 text-center text-sm text-gray-600" onClick={switchModeHandler}>
-              Or{' '}
-              {
-                isLoginMode ?  <a href="#" className="font-medium text-white-600 hover:text-red-400 mb-4 ">Creat an account with us.</a> : <a href="#" className="font-medium text-red-600 hover:text-red-500">Already have an accoun? Sign In.</a>
-              }
-             
-            </p>
-           
-                <form onSubmit={isLoginMode ? authSubmitHandler : register }>
+                <p className="mt-2 text-center text-sm text-gray-600" onClick={switchModeHandler}>
+                    Or{' '}
+                    {
+                        isLoginMode
+                            ? <a href="/" className="font-medium text-white-600 hover:text-red-400 mb-4 ">Creat an account with us.</a> 
+                            : <a href="/" className="font-medium text-red-600 hover:text-red-500">Already have an accoun? Sign In.</a>
+                    }
+
+                </p>
+
+                <form onSubmit={isLoginMode ? authSubmitHandler : register}>
                     {!isLoginMode && (
                         <Input
                             element="input"
@@ -164,25 +166,25 @@ const Auth = () => {
                         />
                     )}
                     {isLoginMode &&
-                    (
-                        <div className="flex items-center justify-between mt-2">
- 
+                        (
+                            <div className="flex items-center justify-between mt-2">
 
-                        <div className="text-sm">
-                          <a href="/home/password-reset" className="font-medium text-white-600 hover:text-white-500">
-                            Forgot your password?
-                          </a>
-                        </div>
-                      </div>
-                    )}
+
+                                <div className="text-sm">
+                                    <a href="/home/password-reset" className="font-medium text-white-600 hover:text-white-500">
+                                        Forgot your password?
+                                    </a>
+                                </div>
+                            </div>
+                        )}
                     <div className="form-group mt-3">
-                            <button 
+                        <button
                             type="submit"
-                             className="group relative w-full flex justify-center py-2 px-4 text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-50" disabled={!formState.isValid}>SIGN IN</button>
-                        </div>
-                    
+                            className="group relative w-full flex justify-center py-2 px-4 text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-50" disabled={!formState.isValid}>SIGN IN</button>
+                    </div>
+
                 </form>
-                </div>
+            </div>
         </React.Fragment>
     );
 };
