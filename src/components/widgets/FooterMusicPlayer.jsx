@@ -19,7 +19,7 @@ import Name from "./Name";
 import { ThemeContext } from "../styles/Theme";
 import { setBannerOpen, setCurrentPlaying } from "../../actions/actions";
 
-function FooterMusicPlayer({ music }) {
+function FooterMusicPlayer({ music, song_id }) {
     const [{ id, title, artist, image, song_file }, setCurrTrack] = useState(music);
     const [isRepeatClicked, setRepeatClick] = useState(false);
     const [isPrevClicked, setPrevClicked] = useState(false);
@@ -88,8 +88,9 @@ function FooterMusicPlayer({ music }) {
         })
     });
     useEffect(() => {
+        console.log(song_id);
         setCurrTrack(music);
-    }, [music]);
+    }, [music, song_id]);
     useEffect(() => {
         setSeekTime((currTime) / (duration / 100))
     }, [currTime, duration]);
